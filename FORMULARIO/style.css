@@ -1,0 +1,21 @@
+.box {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin: 20px;
+}
+
+.dashed{
+  border: 3px dashed black;
+  padding: 3px ;
+}
+
+p{
+  font-family: 'Times New Roman', Times, serif;
+  color: brown;
+}
+
+p span{
+  font-family: cursive;
+  color: blue;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mi primera pagina Web</title>
+</head>
+<body>
+	<h1>Titulo de mi Web</h1>
+	<h2>Bienvenidos a mi web</h2>
+		<p>
+			Hola como estan, estoy practicando html, refrescando conceptos
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet arcu sit amet felis ullamcorper efficitur nec in mauris.<br> Suspendisse elit erat, fermentum quis euismod at, dignissim sit amet tortor. Etiam aliquam leo hendrerit turpis ornare pellentesque. <br> Sed sagittis tincidunt maximus. Suspendisse ullamcorper, sem a pulvinar sollicitudin, urna tortor suscipit lacus, sit amet pharetra odio orci sed purus.<br> Etiam lacinia vel nulla in condimentum. Mauris sit amet velit finibus, iaculis massa convallis, aliquet sapien.
+		</p>
+		<p>
+			Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad.<br> Richard McClintock,
+			<strong>
+			un profesor de Latin de la Universidad de Hampden-Sydney en Virginia, encontró una de las palabras más oscuras de la lengua del latín, "consecteur"</strong>, <em> en un pasaje de Lorem Ipsum </em>, y al seguir leyendo distintos textos del latín, descubrió la fuente indudable.<br>	
+			Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum" (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. <span id="resaltado" class="rojo amarillo">Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento.</span><br> La primera linea del Lorem Ipsum, "Lorem ipsum dolor sit amet..", viene de una linea en la sección 1.10.32
+		</p>
+	<hr/>
+	<h2>Imagenes Html</h2>
+		<img alt="Imagen de un Leon" title="Foto de Leon" src="imagenes\Leon.jpg" width="250em" />
+
+	<hr/>
+	<h3>Tercer encabezado de la pagina</h3>
+		<p>
+			Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo <i>"Contenido aquí, contenido aquí"</i>.<br> <blockquote>Estos textos hacen parecerlo un español que se puede leer.</blockquote><br> Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo.<br> Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).
+
+		</p>
+	<h3>Formulario</h3>
+		<form>
+			<p>
+				<label for="nombre">Nombre</label>
+				<input type="text" name="nombre" placeholder="Escribe tu nombre..." />
+			</p>
+			<p>
+				<label for="descripcion">Descripción</label>
+				<textarea name="descripcion"></textarea>
+			</p>
+			<h5>Genero por radio button</h5>
+				<input type="radio" name="genero" value="hombre"/>Hombre<br/>
+				<input type="radio" name="genero" value="mujer"/>Mujer<br/>
+				<input type="radio" name="genero" value="otro"/>Otro<br/>
+
+			<h5>Genero por selector</h5>
+				<select name="genero2">
+					<option value="hombre">Hombre</option>
+					<option value="mujer">Mujer</option>
+					<option value="otro">Otro</option>
+				</select>
+
+			<input type="submit" value="Enviar Formulario" name="FormSend"/>
+		</form>
+	<h3>Listado de Frutas</h3>
+		<h4>lista ordenada</h4>
+		<ol>
+			<li>Manzana</li>
+				<ul>
+					<li>Roja</li>
+					<li>Verde</li>
+				</ul>
+			<li>Naranja</li>
+			<li>Pera</li>
+			<li>Sandia</li>
+		</ol>
+		<h4>lista desordenada</h4>
+		<ul>
+			<li>Manzana</li>
+			<li>Naranja</li>
+			<li>Pera</li>
+				<ol>
+					<li>Chilena</li>
+					<li>Común</li>
+				</ol>
+			<li>Sandia</li>
+		</ul>
+
+	<h3>Tablas</h3>
+		<table border="1">
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Pais</th>
+			</tr>
+			<tr>
+				<td>Luis</td>
+				<td colspan="2">Londoño</td>
+				<td>Colombia</td>
+			</tr>
+			<tr>
+				<td colspan="3">Juan</td>
+				<td>Gonzales</td>
+				<td>Mexico</td>
+			</tr>
+		</table>
+</body>
+</html>
