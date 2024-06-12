@@ -5,6 +5,7 @@
 
 
 var div_usuarios = document.querySelector("#usuarios");
+var div_profe = document.querySelector("#profesor");
 var div_janet = document.querySelector("#janet");
 
     getUsuarios()
@@ -12,14 +13,23 @@ var div_janet = document.querySelector("#janet");
         .then(users=> {
             listadoUsuarios(users.data);
 
-            return getJanet();
+            return getInfo();
             
+            
+        })
+        .then(data=>{
+             div_profe.innerHTML = data;
+
+            return getJanet();
         })
         .then (data => data.json())
         .then (user2 =>{
             mostrarJanet(user2.data);
-
         })
+        .catch(error =>{
+            alert("Error en las peticiones");
+        });
+        
 
 
 function getUsuarios(){
@@ -30,6 +40,27 @@ function getUsuarios(){
 function  getJanet(){
 
     return fetch('https://reqres.in/api/users/2');
+}
+
+function getInfo(){
+    var profesor = {
+        nombre: 'Luis',
+        apellidos: 'Londono',
+        url: 'https://github.com/dashboard'
+    };
+
+    return new Promise((resolve, reject)=>{
+        var profesor_string = "";
+
+        setTimeout(function(){
+            profesor_string = JSON.stringify(profesor);
+
+            if(typeof profesor_string != 'string' || profesor_string == '') return reject('error'.stringify);
+
+            return resolve(profesor_string);
+        }, 5000);
+        
+    });
 }
 
 function listadoUsuarios(usuarios){
