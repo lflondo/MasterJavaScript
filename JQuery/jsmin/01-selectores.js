@@ -2,8 +2,16 @@
 
 $(document).ready(function(){
     //Selector de ID
-   var rojo = $("#rojo").css("background","red")
-                        .css("color","white");
+   $("#rojo").css("background","red")
+                        .css("color","white")
+                        .css("font-family", "sans-serif");
    
-   console.log(rojo);
+   $("#amarillo").css("background","yellow")
+                                .css("color","green")
+                                .css("font-family","monospace");
+    
+    $("#verde").css("background","green")
+               .css("color", "white");
+    
+
 })
