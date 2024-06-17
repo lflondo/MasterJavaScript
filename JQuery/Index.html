@@ -10,12 +10,29 @@
 
     <script type="text/javascript" src="jsmin/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="jsmin/01-selectores.js"></script>
+    <style>
+        .zebra{
+            border: 5px dashed black;
+        }
+
+        .grande{
+            font-size:50px;
+        }
+    </style>
 </head>
 <body>
     <h1>Aprendiendo jQuery</h1>
+    <ul>
+        <li><a href="https://www.google.com" title="Google">Ir a Google</a></li>
+        <li><a href="https://www.demoblaze.com/" title="store">Ir a product store</a></li>
+        <li><a href="https://demoqa.com/" title="demoqa">Ir a tools QA</a></li>
+        <li><a href="https://todomvc.com/" title="todomvc">Ir a TodoMVC</a></li>
+        
+    </ul>
     <p>Ejercicios de jQuery</p>
-    <p id="rojo">Soy un parrafo rojo</p>
-    <p id="amarillo">Soy un parrafo amarillo</p>
-    <p id="verde">Soy un parrafo verde</p>
+    <p id="rojo" class="zebra">Soy un parrafo rojo</p>
+    <p id="amarillo" class="otrico">Soy un parrafo amarillo</p>
+    <p id="verde" class="zebra">Soy un parrafo verde</p>
+    <p>soy un parrafo blanco</p>
 </body>
 </html>
