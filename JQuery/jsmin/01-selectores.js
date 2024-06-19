@@ -46,4 +46,16 @@ $(document).ready(function(){
     $('[title="Google"]').css('background','#ccc');
     $('[title="store"]').css('background','skyblue');
 
+    //Otros
+    //$('p, a').addClass('margen-superior');
+
+    //var busqueda = $('#caja').find('.resaltado');
+    //var busqueda = $('#caja.resaltado').eq(0).parent().parent().parent().find('[title="store"]');
+    var busqueda = $('#elemento2').parent().parent().find('.resaltado');
+    console.log(busqueda);
+
+
+
+
+
 });
