@@ -31,13 +31,14 @@ $(document).ready(function(){
     });
 
     caja.dblclick(function(){
-        $(this).css("background", "orange")
+        $(this).css("background", "red")
                .css("color", "gray");
     });
 
     //Focus y Blur
 
     var nombre = $('#nombre');
+    var datos = $('#datos')
 
     nombre.focus(function(){
         $(this).css("border", "3px solid red");
@@ -46,7 +47,22 @@ $(document).ready(function(){
     nombre.blur(function(){
         $(this).css("border","1px solid green");
         
-        $('#datos').text($(this).val()).show();
-    })
+        datos.text($(this).val()).show();
+    });
 
+    //MouseDown y MouseUp
+    datos.mousedown(function(){
+        $(this).css("border-color", "skyblue");
+    });
+
+    datos.mouseup(function(){
+        $(this).css("border-color", "black");
+    });
+
+    //MouseMove
+
+    $(document).mousemove(function(U){
+        console.log("En X: "+event.clientX);
+        console.log("En Y: "+event.clientY);
+    });
 });
