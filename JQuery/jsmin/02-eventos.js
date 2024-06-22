@@ -62,7 +62,11 @@ $(document).ready(function(){
     //MouseMove
 
     $(document).mousemove(function(U){
+        $('body').css('cursor','none');
         console.log("En X: "+event.clientX);
         console.log("En Y: "+event.clientY);
+        var sigueme = $("#sigueme");
+        sigueme.css("left",event.clientX)
+               .css("top",event.clientY);
     });
 });
