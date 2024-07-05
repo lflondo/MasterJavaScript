@@ -10,3 +10,9 @@
     font-family: Verdana;
     margin-top: 15px;
 }
+
+#datosajax{
+    border: 2px solid green;
+    width: 250px;
+    height: 250px;
+}
