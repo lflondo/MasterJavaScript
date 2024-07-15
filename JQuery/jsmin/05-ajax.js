@@ -10,6 +10,24 @@ $(document).ready(function(){
         response.data.forEach((element, index) => {
             $('#datosajax').append("<p>"+element.first_name +" "+ element.last_name+"</p>")
         });
-    })
+    });
+
+    $('#formulario').submit(function(e){
+        e.preventDefault();
+
+        var usuario ={
+            "name":$('input[name="nombre"]').val(),
+            "profesion":$('input[name="profesion"]').val()
+        };
+        console.log(usuario);
+
+        $.post($(this).attr("action"), usuario, function(response){
+            console.log(response);
+        }).done(function(){
+            alert("Usuario añadido correctamente")
+        });
+
+        return false;
+    });
 
 });
