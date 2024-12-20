@@ -43,4 +43,7 @@ $(document).ready(function(){
     //$(".caja-efectos").toggle("scale")
     $(".caja-efectos").toggle("shake", 4000)   
     });
+
+    //Tooltip
+    $(document).tooltip();
 });
