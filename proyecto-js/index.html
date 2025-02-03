@@ -6,6 +6,7 @@
 
         <!--Estilos CSS-->
         <link rel="stylesheet" href="css/style.css">
+        <link id="theme" rel="stylesheet" href="css/green.css">
 
         <!--jQuery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -21,7 +22,12 @@
         <!-- Mis Scripts-->
         <script type="text/JavaScript" src="js/main.js"></script>
     </head>
-    <body>
+    <body>  
+        <div id="selector-theme" role="toolbar" aria-label="Cambiar tema de color">  
+            <button id="to-green" aria-label="Verde">🖌️</button> 
+            <button id="to-red" aria-label="Rojo">🖌️</button>
+            <button id="to-blue" aria-label="Azul">🖌️</button>
+        </div>
         <section id="global">
             <!--Cabecera-->
             <header>
@@ -44,7 +50,7 @@
                     <div><img src="img/hojas.jpg" title="Hojas" /></div>
                     <div><img src="img/rojo.jpg" title="Rojo" /></div>
                     <div><img src="img/cielo.jpg" title="cielo" /></div>
-                  </div>
+                </div>
             </div>
             <!--Contenido-->
             <section id="content">

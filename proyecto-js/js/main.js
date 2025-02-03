@@ -57,5 +57,26 @@ $(document).ready(function(){
 
     });
 
+    const theme = $('#theme');
+ 
+    // Cargar tema almacenado al cargar la página
+    const selectedTheme = localStorage.getItem('selectedTheme');
+     
+    if (selectedTheme) {
+        theme.attr('href', `css/${selectedTheme}.css`);
+    }
+
+    $("#to-green").click(function(){
+        theme.attr("href", "css/green.css");
+        localStorage.setItem('selectedTheme', 'green');
+    });
+    $("#to-red").click(function(){
+        theme.attr("href", "css/red.css");
+        localStorage.setItem('selectedTheme', 'red');
+    });
+    $("#to-blue").click(function(){
+        theme.attr("href", "css/blue.css");
+        localStorage.setItem('selectedTheme', 'blue');
+    });
     
 });
