@@ -8,17 +8,14 @@
         <link rel="stylesheet" href="css/style.css">
         <link id="theme" rel="stylesheet" href="css/green.css">
 
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css" />
+        
+
         <!--jQuery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-        <!-- Slider-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">        
-        <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
-
-        <!-- Moment js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/locale/es.js"></script>
-
+         <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
         <!-- Mis Scripts-->
         <script type="text/JavaScript" src="js/main.js"></script>
     </head>
@@ -44,18 +41,32 @@
                     </ul>
                 </nav>
             </header>
-            <!--Slider-->
-            <div id="slider">
-                <div class="bxslider">
-                    <div><img src="img/hojas.jpg" title="Hojas" /></div>
-                    <div><img src="img/rojo.jpg" title="Rojo" /></div>
-                    <div><img src="img/cielo.jpg" title="cielo" /></div>
-                </div>
-            </div>
             <!--Contenido-->
             <section id="content">
-                <div id="posts">
-                    <!-- Cargar posts desde un json-->
+                <div id="box">
+                    <!-- Cargar acordeon-->
+                     <h2>Sobre Nosotros</h2>
+                     <div id="acordeon">
+                        <h3>¿Quienes somos?</h3>
+                        <div>
+                            <p>
+                                En DevEvolution, somos apasionados por la tecnología y la innovación. Desde nuestra fundación en 2000, nos hemos dedicado a crear soluciones de software que transforman negocios y mejoran vidas.
+                            </p>
+                        </div>
+                        <h3>Mision</h3>
+                        <div>
+                            <p>
+                                Nuestra misión es brindar herramientas tecnológicas que permitan a nuestros clientes alcanzar sus objetivos de manera más eficiente y efectiva. 
+                                Creemos en la colaboración, la creatividad y la continua evolución para mantenernos a la vanguardia en un campo en constante cambio.
+                            </p>
+                        </div>
+                        <h3>Vision</h3>
+                        <div>
+                            <p>
+                                Nuestra visión en [Nombre de la Compañía de Software] es ser líderes globales en la innovación tecnológica, desarrollando soluciones de software que no solo resuelvan problemas actuales, sino que también anticipen y den forma a las necesidades del futuro. Aspiramos a transformar la manera en que las personas y las empresas interactúan con la tecnología, haciendo que sea más accesible, intuitiva y poderosa.
+                            </p>
+                        </div>
+                     </div>
                 </div>
                 <aside id="sidebar">
                     <div id="about">
