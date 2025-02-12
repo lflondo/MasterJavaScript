@@ -119,9 +119,43 @@ $(document).ready(function(){
         });
     };
 
+    //Acordeon
     if(window.location.href.indexOf('about')> -1){
         $("#acordeon").accordion();
 
     }
+
+    if(window.location.href.indexOf('reloj')> -1){
+        setInterval(function(){
+            var reloj = moment().format("hh:mm:ss");
+            $('#reloj').html(reloj);
+        }, 1000);
+       
+
+    }
     
+    const validator = new JustValidate('#form_contact');
+    validator
+    .addField('#form_name',[
+        {
+            rule:'required',
+            errorMessage: 'Se requiere el nombre',
+        },
+        {
+            rule:'minLength',
+            value:3,
+            errorMessage: 'El nombre es muy corto',
+
+        },
+        {
+            rule:'maxLength',
+            value:15,
+            errorMessage: 'El nombre es demasiado largo',
+        },
+        {
+            rule: 'customRegexp',
+            value: /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+$/,
+            errorMessage: 'El nombre solo puede contener letras y espacios',
+        },
+    ]);
 });
