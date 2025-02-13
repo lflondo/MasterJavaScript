@@ -18,8 +18,7 @@
         <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
 
         <!--Plugin Validacion-->
-        <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-        
+        <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>       
         <!-- Mis Scripts-->
         <script type="text/JavaScript" src="js/main.js"></script>
     </head>
@@ -53,25 +52,47 @@
                      <form action="" method="POST" id="form_contact">
                         <div class="control-wrapper">
                             <label for="Name">Nombre</label>
-                            <div class="control-wrapper">
-                                <input type="text" id="form_name" name="name">
+                            <div class="input-wrapper">
+                                <input type="text" id="form_name" name="name" autocomplete="off">
                             </div> 
                         </div>
-                        <label for="surname">Apellidos</label>
-                        <input type="text" name="surname">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" >
-                        <label for="gender">Genero</label>
-                        <select name="gender" id="gende">
-                            <option value="">--Seleccione una opcion--</option>
-                            <option value="men">Hombre</option>
-                            <option value="woman">Mujer</option>
-                        </select>
-                        <label for="date">Fecha de nacimiento</label>
-                        <input type="text" name="date" >
-                        <label for="year">Edad</label>
-                        <input type="number" name="year" >
-                        <input type="submit" value="Enviar">
+                        <div class="control-wrappers">
+                            <label for="surname">Apellidos</label>
+                            <div class="input-wrapper">
+                                <input type="text" id="form_surname" name="surname">
+                            </div>
+                        </div>
+                        <div class="control-wrapper">
+                            <label for="email">Email</label>
+                            <div class="input-wrapper">
+                                <input type="email" id="form_email" name="email" >
+                            </div>
+                        </div>
+                        <div class="control-wrapper">
+                            <label for="gender">Genero</label>
+                            <div class="input-wrapper">
+                                <select name="gender" id="form_gender">
+                                    <option value="">--Seleccione una opcion--</option>
+                                    <option value="men">Hombre</option>
+                                    <option value="woman">Mujer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-wrapper">
+                            <label for="fecha">Fecha de nacimiento</label>
+                            <div class="input-wrapper">
+                                <input type="text" id="form_fecha" name="fecha" >
+                            </div>
+                        </div>
+                        <div class="control-wrapper">
+                            <label for="age">Edad</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="form_age" name="age" min="0" >
+                            </div>
+                        </div>
+                        <div class="control-wrapper">
+                            <input type="submit" value="Enviar">
+                        </div>
                      </form>
                 </div>
                 <aside id="sidebar">
