@@ -4,9 +4,23 @@ interface CamisetaBase{
     getColor();
 
 }
+//CrearDecorador
+
+function estampar(logo: string){
+    return function(target: Function){
+        target.prototype.estampacion = function():void{
+            console.log("Camiseta estampada con el logo de: "+ logo)
+        }
+    }
+
+}
 
 // Clase (Molde del objeto)
+@estampar('Nike')
 class Camiseta implements CamisetaBase{
+    [x: string]: any;
+
+
     //Propiedades(Caracteristicas del objeto)
     private color:string;
     private modelo:string;
@@ -76,6 +90,8 @@ class Chaqueta extends Camiseta{
 
 var camiseta = new Camiseta("Verde","manga corta","Nike","M",12);
 console.log(camiseta);
+camiseta.estampacion();
+
 
 var chaqueta = new Chaqueta("Negra","Cuero","Adidas","XL",30);
 chaqueta.setCapucha(true);
