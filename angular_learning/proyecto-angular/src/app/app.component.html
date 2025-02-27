@@ -1,18 +1,20 @@
-<main class="main">
-  <div class="content">
-    <div class="left-side">
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+<div [ngStyle]="{
+                  'background': config.fondo,
+                  'padding': '20px',
+                  'border':'5px solid black',
+                  'border-color': config.color
+                }" >
+  <h1>Bienvenido al {{ title }}</h1>
+  <h3>{{ descripcion }}</h3>
 
-      <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">Ocultar Juegos</button>
-      <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar Juegos</button>
+  <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">
+    Ocultar Juegos
+  </button>
+  <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">
+    Mostrar Juegos
+  </button>
 
-      <videojuego *ngIf="mostrar_videojuegos"></videojuego>
-      <zapatillas></zapatillas>
-      <cursos></cursos>
-      
-    </div>
-  </div>
-</main>
-
-<router-outlet />
+  <videojuego *ngIf="mostrar_videojuegos"></videojuego>
+  <zapatillas></zapatillas>
+  <cursos></cursos>
+</div>
