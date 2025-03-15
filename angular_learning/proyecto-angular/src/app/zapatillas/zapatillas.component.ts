@@ -11,8 +11,12 @@ export class ZapatillasComponent implements OnInit{
     public titulo: string ="Componente de zapatillas";
     public zapatillas: Array<Zapatilla>;
     public marcas: String[];
+    public color: string;
+    public mi_marca: string;
 
     constructor(){
+        this.mi_marca ='Guess'
+        this.color = 'blue';
         this.marcas = new Array();
         this.zapatillas = [
             new Zapatilla('Reebook Classic', 80, 'Reebook', 'Blanco', true),
@@ -38,5 +42,27 @@ export class ZapatillasComponent implements OnInit{
         console.log(this.marcas);
         
     }
+
+    getMarca(){
+        alert(this.mi_marca)
+    }
+
+    addMarca(){
+        this.marcas.push(this.mi_marca)
+    }
+
+    deleteMarca(index:any){
+        //delete this.marcas[index];
+        this.marcas.splice(index,1);
+    }
+
+    onBlur(){
+        console.log("Haz salido del input")
+    }
+
+    mostrarTexto(){
+        alert(this.mi_marca);
+    }
+
 
 }

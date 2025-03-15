@@ -1,7 +1,20 @@
 <h2>{{titulo}}</h2>
+
+<p>Añadir Marca</p>
+<p>
+    <input type="text" [(ngModel)]="mi_marca" (blur)="onBlur()" (keyup.enter)="mostrarTexto()"/>
+    <button (click)="getMarca()">Mostrar Marca</button>
+    <button (click)="addMarca()">Añadi Marca</button>
+</p>
+<p>{{mi_marca}}</p>
+
+
 <p>Compra los tenis de la mejores marcas</p>
 <ul>
-    <li *ngFor="let marca of marcas; let indice = index">{{(indice + 1) + ' ' + marca}}</li>
+    <li *ngFor="let marca of marcas; let indice = index">
+        {{(indice + 1) + ' ' + marca}}
+        <button (click)="deleteMarca(indice)">Borrar</button>
+    </li>
 </ul>
 <p>Los tenis que tenemos disponibles:</p>
 <ul>
@@ -12,5 +25,34 @@
                     [style.background]="calzado.precio <= 80 ? 'green': 'transparent' "
                     [style.color]="calzado.precio < 80 ? 'white': 'black' "> ¡En Oferta!</span></span>
         
+    </li>
+</ul>
+
+<p>El color de la mayoria de los tenis es:</p>
+<input type="text" [(ngModel)]="color" />
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'yellow'">
+        El color principal es el <span [ngStyle]="{
+            'background': color,
+            'padding': '3px',
+        }">amarillo</span>
+    </li>
+    <li *ngSwitchCase="'red'">
+        El color principal es el <span [ngStyle]="{
+            'background': color,
+            'padding': '3px',
+        }">rojo</span>
+    </li>
+    <li *ngSwitchCase="'blue'">
+        El color principal es el <span [ngStyle]="{
+            'background': color,
+            'padding': '3px',
+        }">azul</span>
+    </li>
+    <li *ngSwitchCase="'green'">
+        El color principal es el <span [ngStyle]="{
+            'background': color,
+            'padding': '3px',
+        }">verde</span>
     </li>
 </ul>
