@@ -20,7 +20,14 @@
 <ul>
     <li *ngFor="let calzado of zapatillas">
         <span [ngStyle]="{'text-decoration': !calzado.stock ? 'line-through': 'none'}">
-            {{calzado.nombre}} - <strong>${{calzado.precio}}</strong>
+            {{calzado.nombre}} - 
+            <strong [class.altoPrecio]="calzado.precio > 80"
+                    [ngClass]="{
+                        'fondoRojo':calzado.precio > 90,
+                        'subrayado':calzado.marca == 'Reebook'
+                    }"
+                >
+                ${{calzado.precio}}</strong>
             <span *ngIf="calzado.precio<=80"
                     [style.background]="calzado.precio <= 80 ? 'green': 'transparent' "
                     [style.color]="calzado.precio < 80 ? 'white': 'black' "> ¡En Oferta!</span></span>
