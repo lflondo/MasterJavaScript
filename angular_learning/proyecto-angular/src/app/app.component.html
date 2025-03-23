@@ -7,7 +7,7 @@
   <h1>Bienvenido al {{ title }}</h1>
   <h3>{{ descripcion }}</h3>
 
-  <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">
+  <!-- <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">
     Ocultar Juegos
   </button>
   <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">
@@ -15,6 +15,10 @@
   </button>
 
   <videojuego *ngIf="mostrar_videojuegos"></videojuego>
-  <zapatillas></zapatillas>
   <cursos></cursos>
+
+  <zapatillas></zapatillas> -->
+
+  <router-outlet></router-outlet>
+
 </div>
