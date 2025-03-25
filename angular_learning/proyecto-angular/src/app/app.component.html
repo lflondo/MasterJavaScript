@@ -7,6 +7,17 @@
   <h1>Bienvenido al {{ title }}</h1>
   <h3>{{ descripcion }}</h3>
 
+  <nav>
+    <a routerLink="home" routerLinkActive="active">Inicio</a>
+      &nbsp;
+    <a routerLink="/zapatillas" routerLinkActive="active">Zapatillas</a>
+      &nbsp;
+    <a routerLink="/videojuego" routerLinkActive="active">Videojuegos</a>
+      &nbsp;
+    <a routerLink="/cursos" routerLinkActive="active">Cursos</a>
+  </nav>
+<hr>
+
   <!-- <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">
     Ocultar Juegos
   </button>
